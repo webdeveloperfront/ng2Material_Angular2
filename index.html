@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="node_modules/ng2-material/dist/ng2-material.css">
+    <link rel="stylesheet" href="node_modules/ng2-material/dist/font.css">
+    <link rel="stylesheet" type="text/css" href="app/css/styles.css">
+
+    <!--<link rel="stylesheet" href="https://cdn.rawgit.com/justindujardin/ng2-material/gh-pages/v/0.2.5/dist/ng2-material.css" />-->
+    <!--<link rel="stylesheet" href="https://cdn.rawgit.com/justindujardin/ng2-material/gh-pages/v/0.2.5/dist/font.css" />-->
+
+
+    <!-- 1. Load libraries -->
+    <!-- IE required polyfills, in this exact order -->
+    <script src="node_modules/es6-shim/es6-shim.min.js"></script>
+    <script src="node_modules/systemjs/dist/system-polyfills.js"></script>
+    <script src="node_modules/angular2/es6/dev/src/testing/shims_for_IE.js"></script>
+    <script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <script src="node_modules/rxjs/bundles/Rx.js"></script>
+    <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
+
+    <script src="node_modules/ng2-material/dist/ng2-material.js"></script>
+
+    <!-- 2. Configure SystemJS -->
+    <script>
+        System.config({
+            packages: {
+                app: {
+                    format: 'register',
+                    defaultExtension: 'js'
+                }
+            }/*,
+            map: {
+                'ng2material': 'node_modules/ng2material'
+            }*/
+        });
+        System.import('app/main')
+                .then(null, console.error.bind(console));
+    </script>
+
+
+
+
+
+</head>
+<body>
+
+<my-app></my-app>
+
+</body>
+</html>
